@@ -1,0 +1,285 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title>Dr.Alert</title>
+<link rel="manifest" href="site.webmanifest">
+ <link rel="shortcut icon" type="image/x-icon" href="img/logofinal.jpg">
+	
+<style>
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+    background: url(baby.jpg);
+    background-size: cover;
+    font-family: 'Titillium Web', sans-serif;
+}
+.Title{
+	width: 400px;
+	height: 1200px;
+	background: transparent;
+	position: absolute;
+	color: #000000;
+	font-size: 700%;
+	top: 0%;
+	left: 30%;
+}
+
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+	color: #000000;
+    text-align: center;
+    font-size: 22px;
+	font-family: 'baloo';
+}
+h2{
+    margin: 0;
+    padding: 0 0 20px;
+	color: #000000;
+    text-align: center;
+    font-size: 22px;
+	font-family: 'baloo';
+}
+
+.topnav {
+	background: transparent;
+	overflow: hidden;
+}
+.topnav a {
+	float: left;
+	color: #000000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+.topnav a:hover{
+	background-color: #ffccee;
+	color: black;
+}
+.topnav a.active{
+	background-color: #ff0066;
+	color: white;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+	transition: .5s ease;
+}
+
+a:hover{
+	color: #179b77;
+}
+
+.form{
+	padding: 40px;
+	max-width: 450px;
+	margin: 150px auto;
+	border-radius: 4px;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+	transition: .5s ease;
+}
+
+.form:hover{
+	box-shadow: 0px 0px 40px 16px rgba(18, 18, 18, 0.6);
+}
+
+.tab-group{
+		list-style: none;
+		padding: 0;
+		margin: 0 0 40px 0;
+	}
+
+.tab-group:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.tab-group li a{
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+	background: #000;
+	color: #fff;
+	font-size: 20px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s ease;
+}
+
+.tab-group li a:hover{
+	background-color: #ff0080;
+	color: #ffffff;
+}
+
+.tab-group .active a{
+	background: #1ab188;
+	color: #ffffff;
+}	
+
+.tab-content > div:last-child{
+	display: none;
+}
+
+label{
+	position: absolute;
+	transform: translateY(6px);
+	left: 14px;
+	color: black;
+	transition: all 0.25s ease;
+	pointer-events: none;
+	font-size: 18px;
+	display: block;
+}
+
+label .req{
+	margin: 2px;
+	color: red;
+}
+
+label .active{
+	transform: translateY(50px);
+	left: 50px;
+	font-size: 20px;
+}
+
+label .highlight{
+	color: #000;
+	margin-top: 10px;
+}
+
+input{
+		font-size: 18px;
+		display:block ;
+		width: 100%;
+		height: 15%;
+		padding: 10px 10px;
+		background: none;
+		background-image: none;		
+		border: 1px solid #fff;
+		color: #000;
+		border-radius: 0;
+		transition: border-color .35s ease, box-shadow .35s ease;
+}
+
+input:focus{
+	outline: 100;
+	border-color: #000;
+	width: 300px;
+}	
+
+.field-wrap{
+	position: relative;
+	margin-bottom: 0px;
+}
+
+.top-row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.top-row > div{
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+}
+
+.top-row > div:last-child{
+	margin:0;
+}
+
+.button{
+		border: 0;
+		outline: none;
+		border-radius: 0;
+		padding: 15px 0;
+		font-size: 1rem;
+		font-weight: 600;
+		text-transform:uppercase;
+		letter-spacing:.1em;
+		background: #1ab188;		
+		color: #ffffff;
+		transition: all 0.2s ease;
+}
+
+.button:hover, .button:focus {
+	opacity: 1;
+	color: white;
+	background-color: #2b2beb;
+}
+
+.button-block{
+	display:block;
+	width: 100%;
+}
+
+.forgot{
+	margin-top: -20px;
+	text-align: right;
+	margin-bottom:10px;
+
+}	
+</style>
+</head>
+<body>
+	<div class="Title">
+		<h1><center>DR.ALERT</center></h1>
+		<h2><center>Child Vaccination Login</center></h2>
+	</div>
+    <div class="cotainer" style ="padding: 40px; max-width: 450px; margin: 150px auto; border-radius: 4px; box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3); transition: .5s ease;">
+	<div class="tab-content">
+			<h1>Login Your Account</h1>	
+			<form id="loginForm" action="http://127.0.0.1:8080/login" method="post">
+				<input type="text" id="username" name="username" required placeholder="Username" />
+				<input type="password" id="password" name="password" required placeholder="Password" />
+				<button type="submit" style="border: 0; outline: none; border-radius: 0; padding: 15px 0; font-size: 1rem; font-weight: 600; text-transform:uppercase; letter-spacing:.1em; background: #1ab188; color: #ffffff; transition: all 0.5s ease; display:block; width: 100%;">
+					Login</button>
+			</form>
+			<p id="message"></p>
+			
+	</div>
+	</div>
+	
+	<script>
+	document.getElementById("loginForm").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("message");
+
+    try {
+        const response = await fetch("http://127.0.0.1:8080/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            message.textContent = "✅ You have logged in successfully!";
+            setTimeout(() => window.location.href = "dashboard.html", 2000);
+        } else {
+            message.textContent = "❌ " + data.error;
+        }
+    } catch (error) {
+        message.textContent = "⚠️ Server error, please try again.";
+    }
+});
+
+	</script>
+	
+			
+
+</body>
+</html>
